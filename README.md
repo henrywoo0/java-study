@@ -110,7 +110,8 @@
 ### 클래스
 
 - 클래스는 **객체의 속성과 기능**을 코드로 구현한 것
-- 클래스는 속성(멤버 변수)과 메서드를 가짐 
+- 클래스는 속성(멤버 변수)과 메서드를 가짐
+- 클래스 이름은 대문자로 시작함 (coding convention)
 
 아래는 클래스를 정의하는 문법이다.
 ```
@@ -120,7 +121,36 @@
 }
 ```
 
+### 멤버 변수 (member variable)
 
+- 객체가 가지는 속성을 클래스 내부에 변수로 선언한 것
+- 멤버 변수(member variable)는 다른 말로 속성(property) 또는 특성(attribute) 등으로 표현함
+- 멤버 변수의 자료형은 기본 자료형(int, double ..), 참조 자료형(String, Date, 직접 만든 클래스 ..) 둘 다 가능하다.
+
+참고) 패키지는 클래스 파일의 묶음이다. 패키지는 계층 구조를 가지고, 이 계층 구조를 잘 구성해야 유지 보수가 편리하다.
+
+### 메서드 (method)
+
+- 메서드는 함수에 객체 지향 개념이 포함된 용
+- 멤버 변수를 사용하여 클래스의 기능을 구현한 것
+
+아래는 클래스와 내부의 멤버 변수, 메서드를 구현한 코드이다.
+```java
+public class Student {
+    int studentID;
+    String studentName;
+    int grade;
+    String address;
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String name) {
+        studentName = name;
+    }
+}
+```
 
 
 
