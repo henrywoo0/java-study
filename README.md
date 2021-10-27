@@ -182,9 +182,52 @@ Student studentAhn = new Student();
 
 참고) 힙(heap)은 프로그램에서 사용하는 동적 메모리(dynamic memory)공간이다. 보통 객체가 생성될 때 사용하는 공간이다.
 
+### 생성자 (constructor)
 
+- 생성자는 클래스를 처음 만들 때 멤버 변수나 상수를 초기화해줌
+- 생성자가 없는 클래스는 자바 컴파일러에서 디폴트 생성자(default constructor)를 자동으로 만듦
+- 프로그래머가 디폴트 생성자를 직접 만드는 경우 필요에 따라 코드 구현 가능
+- 인스턴스가 생성될 때 인스턴스 초기화를 위해 생성자를 직접 구현하기도 함
 
+아래는 클래스 안의 디폴트 생성자를 코드로 구현한 것이다.
+```java
+public class Person {
+  String name;
+  float height;
+  float weight;
+  
+  public Person() {}
+}
+```
 
+### 생성자 오버로드 (constructor overload)
+
+- 생성자 오버로드는 클래스에 생성자가 두 개 이상 제공되는 것
+- 필요에 따라 매개변수가 다른 생성자를 여러 개 만들 수 있음
+- 경우에 따라 클래스에서 일부러 디폴트 생성자를 제공하지 않기도 함
+
+참고) 객체 지향 프로그램에서 메서드 이름은 같고 매개변수만 다른 경우를 **오버로드**라고 한다.
+
+아래는 생성자 오버로드를 구현한 코드이다.
+```java
+public class Person {
+    String name;
+    float height;
+    float weight;
+
+    public Person() {}
+
+    public Person(String pname) {
+        name = pname;
+    }
+
+    public Person(String pname, float pheight, float pweight) {
+        name = pname;
+        height = pheight;
+        weight = pweight;
+    }
+}
+```
 
 
 
