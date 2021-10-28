@@ -328,9 +328,53 @@ public class Student2 {
 
 참고) 디자인 패턴(design pattern)이란 객체 지향 프로그램을 어떻게 구현해야 더 유연하고 재활용성이 높은 프로그램을 만들 수 있는지 정리한 내용이다. 다시 말해, 프로그램 특성에 따른 설계 유형을 이론화한 것이다.
 
+#### 1단계 : 생성자를 private으로 만들기
+- private으로 디폴트 생성자를 명시하여, 외부 클래스에서 마음대로 인스턴스를 여러 개 생성하는 것을 막기 위해 
+- 클래스 내부에서만 해당 클래스의 생성을 제어할 수 있음
+```java
+public class Company {
+    private Company() {}
+}
+```
 
+#### 2단계 : 클래스 내부에 static으로 유일한 인스턴스 생성
+- 이 인스턴스가 프로그램 전체에서 사용할 유일한 인스턴스
+- 유일한 인스턴스를 private으로 선언하여 인스턴스 오류 방지
+```java
+public class Company {
+    private static Company instance = new Company();
+    private Company() {}
+}
+```
 
+#### 3단계 : 외부에서 참조 가능한 public 메서드 만들기
+- 외부 사용이 가능하도록, 유일하게 생성한 인스턴스를 반환하는 public 메서드 생성
+- 이때 인스턴스 생성과 상관없이 호출할 수 있어야 하기 때문에, 인스턴스 반환하는 메서드는 반드시 static으로 선언
+```java
+public class Company {
+    private static Company instance = new Company();
+    private Company() {}
+    
+    public static Company getInstance() {
+        if(instance == null) {
+            instance = new Company();
+        }
+        return instance;
+    }
+}
+```
 
+#### 4단계 : 클래스를 실제 사용하는 코드 만들기
+- 외부 클래스에서는 객체를 생성할 수 없으므로, static으로 제공되는 getInstance() 메서드를 호출
+```java
+public class CompanyTest {
+    public static void main(String[] args) {
+        Company myCompany1 = Company.getInstance();
+        Company myCompany2 = Company.getInstance();
+        System.out.println(myCompany1 == myCompany2);
+    }
+}
+```
 
 
 
