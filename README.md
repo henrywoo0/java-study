@@ -398,7 +398,46 @@ int[] studentIDs = new int[] {101, 102, 103};
 int[] studentIDs = {101, 102, 103}; 
 ```
 
+- 배열은 배열 총 길이를 나타내는 length 속성을 가짐
 
+아래는 배열을 사용하고 출력한 코드이다.
+```java
+public class ArrayTest {
+    public static void main(String[] args) {
+        int[] num = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        
+        for(int i = 0; i < num.length; i++) {
+            System.out.println(num[i]);
+        }
+    }
+}
+```
+
+- 객체 배열을 선언하게 되면, 각각의 인스턴스 주소 값을 담을 공간이 생성됨
+- 즉, Book이라는 클래스가 있다고 가정할 때 `Book[] library = new Book[5];`의 5개 공간에는 각각 Book 객체의 주소값을 담을 수 있음
+- 아래 코드처럼 객체 배열 선언 후에 new 키워드를 사용하여 생성된 객체를 직접 저장해야 함
+
+```java
+public class BookArray {
+    public static void main(String[] args) {
+        Book[] library = new Book[5];
+
+        library[0] = new Book("태백산맥", "조정래");
+        library[1] = new Book("데미안", "헤르만 헤세");
+        library[2] = new Book("어떻게 살 것인가", "유시민");
+        library[3] = new Book("토지", "박경리");
+        library[4] = new Book("어린 왕자", "생텍쥐페리");
+
+        for(int i = 0; i < library.length; i++) {
+            library[i].showBookInfo();
+        }
+
+        for(int i = 0; i < library.length; i++) {
+            System.out.println(library[i]);
+        }
+    }
+}
+```
 
 
 
