@@ -270,6 +270,41 @@ public class Student {
 }
 ```
 
+- static 변수는 인스턴스 생성과는 별개이므로 **인스턴스보다 먼저 생성**
+- 따라서 static 변수는 클래스 이름으로도 참조하여 사용 가능 (보통 클래스 이름과 함께 사용)
+- static 변수를 위한 메서드를 static 메서드 또는 클래스 메서드(class method)라고 함
+- static 메서드 또한 static 변수처럼 클래스 이름으로 직접 호출 가능
+
+아래는 static 메서드를 구현한 코드이다.
+
+```java
+public class Student2 {
+    private static int serialNum = 1000;
+    int studentID;
+    String studentName;
+    int grade;
+    String address;
+
+    public Student2() {
+        serialNum++;
+        studentID = serialNum;
+    }
+
+    public static int getSerialNum() {
+        int i = 10;
+        return serialNum;
+    }
+
+    public static void setSerialNum(int serialNum) {
+        Student2.serialNum = serialNum;
+    }
+}
+```
+
+- static 메서드 내에서 지역 변수와 클래스 변수는 사용할 수 있지만, 인스턴스 변수를 사용하면 오류가 발생함
+
+### 변수 유효 범위 (scope)
+
 
 
 
