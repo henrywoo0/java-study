@@ -231,7 +231,7 @@ public class Person {
 
 ### 정보 은닉 (information hiding)
 
-- 객체 지향 프로그램에서는 접근 제어자(access modifier)를 사용해 (클래스 내부 변수, 메서드, 생성자에 대한) 접근 권한을 지정할 수 있음
+- 객체 지향 프로그램에서는 접근 제어자(access modifier)를 사용해 (클래스 내부 변수, 메서드, 생성자에 대한) **접근 권한**을 지정할 수 있음
 - private으로 선언한 멤버 변수는 getter, setter 메서드(public으로 설정)로 접근 가능
 - 정보 은닉은 클래스 내부에서 사용할 변수나 메서드를 private으로 선언하여 외부에서 직접 접근하지 못하도록 하는 것
 - 정보 은닉은 객체 지향 프로그래밍의 특징
@@ -250,6 +250,25 @@ public class Person {
 - 또한 this는 생성자에서 다른 생성자를 호출할 수 있음 (이때 호출 코드 이전에 다른 코드를 넣으면 오류 발생)
 - this를 활용해 생성된 클래스 자신의 주소값을 반환할 수 있음
 
+### static 변수
+
+- static 변수는 정적 변수 혹은 클래스 변수(class variable)라고도 함
+- static 변수는 클래스에서 공통으로 사용하는 변수, 즉 프로그램이 실행되어 메모리에 올라갔을 때 한 번 메모리 공간이 할당되고, 그 후 모든 인스턴스가 공유하는 변수
+- 자바에서는 다른 멤버 변수처럼 클래스 내부에, static 예약어를 사용하여 선언
+
+아래는 static의 사용법이다.
+```
+static 자료형 변수명;
+```
+
+아래처럼 class 안에 static 예약어를 사용하여 선언한다.
+```java
+public class Student {
+    public static int serialNum = 1000;
+    public int studentID;
+    public String studentName;
+}
+```
 
 
 
