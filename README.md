@@ -439,6 +439,15 @@ public class BookArray {
 }
 ```
 
+- 배열 복사는 기존 배열과 자료형, 배열 크기가 같은 배열을 새로 만들거나 더 큰 배열을 만들어 기존 배열 자료를 불러올 때 사용
+- 배열 복사의 가장 단순한 방법은 for문을 활용한 복사임
+- 다른 방법은 `System.arraycopy()`메서드를 사용하는 방법
+- `System.arraycopy(src, srcPos, dest, destPos, length)`메서드의 각 매개변수 설명은 아래와 같음
+
+|매개변수|설명|
+|-------|----|
+|src|복사할 배열 이름|
+|srcPos|복사할 배열의 첫 번째 위치|
 
 
 
