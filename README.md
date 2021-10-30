@@ -395,7 +395,7 @@ public class CompanyTest {
 아래는 배열을 선언하고 특정한 값으로 초기화한 코드이다.
 ```java
 int[] studentIDs = new int[] {101, 102, 103};
-int[] studentIDs = {101, 102, 103}; 
+int[] studentIDs = {101, 102, 103};
 ```
 
 - 배열은 배열 총 길이를 나타내는 length 속성을 가짐
@@ -448,6 +448,10 @@ public class BookArray {
 |-------|----|
 |src|복사할 배열 이름|
 |srcPos|복사할 배열의 첫 번째 위치|
+|dest|복사해서 붙여 넣을 대상 배열 이름|
+|destPos|복사해서 대상 배열에 붙여넣을 첫 번째 위치|
+|length|src에서 dest로 복사할 요소 개수|
+
 
 
 
