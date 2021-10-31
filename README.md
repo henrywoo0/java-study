@@ -452,6 +452,7 @@ public class BookArray {
 |destPos|복사해서 대상 배열에 붙여넣을 첫 번째 위치|
 |length|src에서 dest로 복사할 요소 개수|
 
+- 배열 복사 방법에는 크게 얕은 복사와 깊은 복사가 있음
 
 
 
