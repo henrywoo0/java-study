@@ -515,9 +515,54 @@ for(자료형 변수 : 배열) {
 
 ![가상메서드 예시 사진](https://media.vlpt.us/images/ldevlog/post/858b7c8e-641e-47fc-bb5f-d10488f7a84c/image.png)
 
+### 다형성 (polymorphism)
 
+- 하나의 코드가 여러 자료형으로 구현되어 실행되는 것 (같은 코드에서 여러 실행 결과 나오는 것)
+- 추상 클래스, 인터페이스에서 구현됨
+- 묵시적 클래스 형 변환과 가상 메서드를 바탕으로 함
+- 상위 클래스에서 **공통 부분의 메서드**를 제공하고, 하위 클래스에서 **추가 요소**를 덧붙여 구현
+- 또는 상속받은 모든 클래스를 **하나의 상위 클래스로 처리**
+- 다형성을 활용하여 유연하면서도 구조화되고, 확장성 있고 유지보수하기 좋은 프로그램 개발 가능
 
+아래는 다형성을 활용한 코드이다.
+```java
+class Animal {
+    public void move() {
+        System.out.println("동물이 움직입니다.");
+    }
+}
 
+class Human extends Animal {
+    public void move() {
+        System.out.println("사람이 두 발로 걷습니다.");
+    }
+}
+
+class Tiger extends Animal {
+    public void move() {
+        System.out.println("호랑이가 네 발로 뜁니다.");
+    }
+}
+
+class Eagle extends Animal {
+    public void move() {
+        System.out.println("독수리가 하늘을 납니다.");
+    }
+}
+
+public class AnimalTest1 {
+    public static void main(String[] args) {
+        AnimalTest1 aTest = new AnimalTest1();
+        aTest.moveAnimal(new Human());
+        aTest.moveAnimal(new Tiger());
+        aTest.moveAnimal(new Eagle());
+    }
+
+    public void moveAnimal(Animal animal) {
+        animal.move();
+    }
+}
+```
 
 
 
