@@ -19,7 +19,7 @@ public class Customer {
         this.customerName = customerName;
         customerGrade = "SILVER";
         bonusRatio = 0.01;
-        System.out.println("Customer");
+        // System.out.println("Customer");
     }
 
     public int calcPrice(int price) {
