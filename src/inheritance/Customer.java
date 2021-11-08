@@ -8,9 +8,18 @@ public class Customer {
     int bonusPoint; // 보너스 포인트
     double bonusRatio; // 적립 비율
 
-    public Customer() {
-        customerGrade = "SILVER"; // 기본 등급
-        bonusRatio = 0.01; // 보너스 포인트 기본 적립 비율
+//    public Customer() {
+//        customerGrade = "SILVER"; // 기본 등급
+//        bonusRatio = 0.01; // 보너스 포인트 기본 적립 비율
+//        System.out.println("Customer() 생성자 호출");
+//    }
+
+    public Customer(int customerID, String customerName) {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        customerGrade = "SILVER";
+        bonusRatio = 0.01;
+        System.out.println("Customer");
     }
 
     public int calcPrice(int price) {
