@@ -1,11 +1,11 @@
-package polymorphism;
+package witharraylist;
 
 public class Customer {
     protected int customerID;
     protected String customerName;
     protected String customerGrade;
-    protected int bonusPoint;
-    protected double bonusRatio;
+    int bonusPoint;
+    double bonusRatio;
 
     public Customer() {
         initCustomer();
@@ -46,5 +46,4 @@ public class Customer {
     public String getCustomerName() {
         return customerName;
     }
-
 }
