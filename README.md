@@ -565,4 +565,4 @@ public class AnimalTest1 {
 ```
 
 - 앞에서 봤듯이 상속을 사용하면 모든 등급에서 공통으로 사용하는 코드 부분은 상위 클래스에 구현하고, 각 등급별 내용은 각각의 하위 클래스에 구현
-
+- 상속을 사용하는 것이 항상 좋은 것은 아님 ex) IS-A 관계 (is a relationship; inheritance)
