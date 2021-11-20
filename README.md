@@ -569,5 +569,4 @@ public class AnimalTest1 {
 - 단순히 코드 재사용의 목적으로 서로 관련이 없는 클래스를 상속 관계로 사용하는 것은 좋지 않음
 
 참고) IS-A 관계 : 일반적인 개념과 구체적인 관계 (is a relationship; inheritance)
-
-
+참고) HAS-A 관계 : 한 클래스가 다른 클래스를 소유한 관계, 이 경우 상속은 옳지 않음 (has a relationship; association)
