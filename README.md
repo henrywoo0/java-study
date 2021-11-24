@@ -623,7 +623,28 @@ int add(int x, int y) {}
 - 템플릿 메서드는 시나리오를 정의한 메서드, 즉 공통으로 사용하는 메서드이므로 하위 클래스에서 재정의하면 안 됨 (그래서 `final` 예약어 사용)
 - **로직 흐름이 이미 정해져 있는 프레임워크**에서 많이 사용하는 기본 구현 방법
 
+```java
+public abstract class Car {
+    public abstract void drive();
+    public abstract void stop();
 
+    public void startCar() {
+        System.out.println("시동을 켭니다.");
+    }
+
+    public void turnOff() {
+        System.out.println("시동을 끕니다.");
+    }
+
+    // 템플릿 메서드
+    final public void run() {
+        startCar();
+        drive();
+        stop();
+        turnOff();
+    }
+}
+```
 
 
 
