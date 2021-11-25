@@ -8,6 +8,11 @@ public class ManualCar extends Car {
     }
 
     @Override
+    public void wiper() {
+        System.out.println("사람이 빠르기를 조작합니다");
+    }
+
+    @Override
     public void stop() {
         System.out.println("브레이크로 정지합니다");
     }
