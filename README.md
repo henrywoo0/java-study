@@ -667,8 +667,27 @@ public abstract class Car {
 - 이미 학습한 코드를 이해하면서 자기만의 코딩 가능
 - 테스트 코드를 만들 수 있다는 것은 이미 구현 코드가 머릿속에 있다는 뜻
 
+### 인터페이스 (interface)
 
+- 클래스 혹은 프로그램이 제공하는 기능을 명시적으로 선언
+- 추상 메서드와 상수로 이루어짐
+- 인터페이스 내의 메서드는 `public abstract` 예약어를 명시하지 않아도 컴파일 과정에서 자동으로 추상메서드로 변환
+- 인터페이스 내에 선언한 변수는 컴파일 과정에서 상수로 자동 변환됨
 
+```java
+public interface Calc {
+    double PI = 3.14;
+    int ERROR = -99999999;
+
+    int add(int num1, int num2);
+    int substract(int num1, int num2);
+    int times(int num1, int num2);
+    int divide(int num1, int num2);
+}
+```
+
+- implements : 클래스에서 인터페이스를 구현하는 것
+- 인터페이스로는 인스턴스를 생성할 수 없음
 
 
 
