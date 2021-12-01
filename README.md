@@ -658,12 +658,18 @@ public abstract class Car {
 |메서드|final 메서드는 하위 클래스에서 재정의 불가|
 |클래스|final 클래스는 상속 불가|
 
+```java
+final double PI = 3.14;
+System.out.println(PI);
+PI = 1.23; // error
+```
+
 - 보안과 관련되어 있거나 기반 클래스가 변하면 안 되는 경우 클래스를 `final`로 선언
 - 대표적으로 JDK에서 String, Integer 클래스 등이 `final`로 선언한 클래스
 
 ### 테스트 주도 개발 (Test Driven Development; TDD)
 
-- **테스트 코드**를 먼저 개발하는 개발 방법론
+- **테스트 코드**를 먼저 개발하는 개발 방법론 (studentTest.java -> student.java)
 - 이미 학습한 코드를 이해하면서 자기만의 코딩 가능
 - 테스트 코드를 만들 수 있다는 것은 이미 구현 코드가 머릿속에 있다는 뜻
 
@@ -688,8 +694,6 @@ public interface Calc {
 
 - implements : 클래스에서 인터페이스를 구현하는 것
 - 인터페이스로는 인스턴스를 생성할 수 없음
-
-
 
 
 
