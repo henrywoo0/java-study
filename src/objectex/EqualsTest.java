@@ -28,6 +28,11 @@ class Student {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return studentId;
+    }
 }
 
 public class EqualsTest {
