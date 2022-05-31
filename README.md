@@ -188,10 +188,10 @@ Student studentAhn = new Student();
 
 참고) 힙(heap)은 프로그램에서 사용하는 동적 메모리(dynamic memory)공간이다. 보통 객체가 생성될 때 사용하는 공간이다.
 
-### 생성자 (constructor)
+### 생성자 (basic.constructor)
 
 - 생성자는 클래스를 처음 만들 때 멤버 변수나 상수를 초기화해줌
-- 생성자가 없는 클래스는 자바 컴파일러에서 디폴트 생성자(default constructor)를 자동으로 만듦
+- 생성자가 없는 클래스는 자바 컴파일러에서 디폴트 생성자(default basic.constructor)를 자동으로 만듦
 - 프로그래머가 디폴트 생성자를 직접 만드는 경우 필요에 따라 코드 구현 가능
 - 인스턴스가 생성될 때 인스턴스 초기화를 위해 생성자를 직접 구현하기도 함
 
@@ -206,7 +206,7 @@ public class Person {
 }
 ```
 
-### 생성자 오버로드 (constructor overload)
+### 생성자 오버로드 (basic.constructor overload)
 
 - 생성자 오버로드는 클래스에 생성자가 두 개 이상 제공되는 것
 - 필요에 따라 매개변수가 다른 생성자를 여러 개 만들 수 있음
@@ -235,7 +235,7 @@ public class Person {
 }
 ```
 
-### 정보 은닉 (information hiding)
+### 정보 은닉 (information basic.hiding)
 
 - 객체 지향 프로그램에서는 접근 제어자(access modifier)를 사용해 (클래스 내부 변수, 메서드, 생성자에 대한) **접근 권한**을 지정할 수 있음
 - private으로 선언한 멤버 변수는 getter, setter 메서드(public으로 설정)로 접근 가능
@@ -327,7 +327,7 @@ public class Student2 {
 - 멤버 변수 -> 클래스의 속성을 나타내고, 각 인스턴스마다 다른 값을 가질 때
 - static 변수 -> 여러 인스턴스에서 공유해서 사용, 한 번만 생성
 
-### 싱글톤 패턴 (singleton pattern)
+### 싱글톤 패턴 (basic.singleton pattern)
 
 - 싱글톤 패턴은 객체 지향 프로그램에서 **인스턴스를 단 하나**만 생성하는 디자인 패턴
 - 실무 혹은 여러 프레임워크에서 많이 사용하는 패턴
@@ -484,7 +484,7 @@ for(자료형 변수 : 배열) {
 }
 ```
 
-### 상속 (inheritance)
+### 상속 (basic.inheritance)
 
 - 객체지향 프로그래밍의 중요 특징 중 하나
 - B 클래스가 A 클래스를 상속받으면, B 클래스는 A 클래스의 멤버 변수와 메서드를 사용할 수 있음
@@ -522,7 +522,7 @@ for(자료형 변수 : 배열) {
 
 ![가상메서드 예시 사진](https://media.vlpt.us/images/ldevlog/post/858b7c8e-641e-47fc-bb5f-d10488f7a84c/image.png)
 
-### 다형성 (polymorphism)
+### 다형성 (basic.polymorphism)
 
 - 하나의 코드가 여러 자료형으로 구현되어 실행되는 것 (같은 코드에서 여러 실행 결과 나오는 것)
 - 추상 클래스, 인터페이스에서 구현됨
@@ -575,7 +575,7 @@ public class AnimalTest1 {
 - 상속을 사용하는 것이 항상 좋은 것은 아님 (IS-A 관계일 때 사용하는 것이 가장 효율적, 일반 클래스를 점차 구체화하는 상황)
 - 단순히 코드 재사용의 목적으로 **서로 관련이 없는 클래스를 상속 관계로 사용하는 것은 좋지 않음**
 
-참고) `IS-A` 관계 : 일반적인 개념과 구체적인 관계 (is a relationship; inheritance) <br />
+참고) `IS-A` 관계 : 일반적인 개념과 구체적인 관계 (is a relationship; basic.inheritance) <br />
 참고) `HAS-A` 관계 : 한 클래스가 다른 클래스를 소유한 관계 (has a relationship; association), 이 경우 상속은 옳지 않음
 
 ### 다운 캐스팅 (down casting)
@@ -621,7 +621,7 @@ int add(int x, int y) {}
 |구현된 메서드|하위 클래스에서 공통으로 사용할 구현 코드. 하위 클래스에서 재정의 가능|
 |추상 메서드|하위 클래스가 어떤 클래스냐에 따라 구현 코드가 달라짐|
 
-### 템플릿 메서드 (template method)
+### 템플릿 메서드 (basic.template method)
 
 - 디자인 패턴의 한 방법으로, 모든 객체지향 프로그램에서 사용하는 구현 방법
 - **메서드 실행 순서**와 **시나리오**를 정의하는 메서드
