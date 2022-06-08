@@ -28,7 +28,14 @@ public class MemberHashSet {
             }
         }
 
-        System.out.println(memberId + "에 해당하는 멤버를 찾을 수 없습니다.");
+        System.out.println(memberId + "가 존재하지 않습니다.");
         return false;
+    }
+
+    public void showAllMember() {
+        for(Member member : hashSet) {
+            System.out.println(member);
+        }
+        System.out.println();
     }
 }
