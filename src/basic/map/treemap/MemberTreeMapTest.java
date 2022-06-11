@@ -14,11 +14,11 @@ public class MemberTreeMapTest {
         memberTreeMap.addMember(memberPark);
         memberTreeMap.addMember(memberSon);
         memberTreeMap.addMember(memberHong);
-        memberTreeMap.addMember(memberSon);
+        memberTreeMap.addMember(memberLee);
 
         memberTreeMap.showAllMembers();
 
         memberTreeMap.removeMember(1004);
-
+        memberTreeMap.showAllMembers();
     }
 }
