@@ -1,4 +1,4 @@
-package basic.ftp;
+package assignments.ftp;
 
 import java.net.ServerSocket;
 import java.net.Socket;

@@ -1,4 +1,4 @@
-package basic.ftp;
+package assignments.ftp;
 
 public class FileTransferFailedException extends RuntimeException {
 }

@@ -1,4 +1,4 @@
-package basic.ftp;
+package assignments.ftp;
 
 public class LoginFailedException extends RuntimeException {
 }
