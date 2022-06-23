@@ -34,10 +34,16 @@ class OutClass {            // 외부 클래스
 
         void inTest() {
             // num += 10; // 외부 클래스의 인스턴스 변수는 사용할 수 없음
-
             System.out.println("InStaticClass inNum = " + inNum + "(내부 클래스의 인스턴스 변수 사용)");
             System.out.println("InStaticClass sInNum = " + sInNum + "(내부 클래스의 정적 변수 사용)");
             System.out.println("OutClass sNum = " + sNum + "외부 클래스의 정적 ");
+        }
+
+        static void sTest() {
+            // num += 10;
+            // inNum += 10;
+            System.out.println("OutClass sNum = " + sNum + "(외부 클래스의 정적 변수 사용)");
+            System.out.println("InStaticClass sInNum = " + sInNum + "(내부 클래스의 정적 변수 사용)");
         }
     }
 }
@@ -45,7 +51,10 @@ class OutClass {            // 외부 클래스
 public class InnerTest {
     public static void main(String[] args) {
         OutClass outClass = new OutClass();
+        OutClass.InStaticClass sInClass = new OutClass.InStaticClass();
         System.out.println("외부 클래스 이용하여 내부 클래스 기능 호출");
         outClass.usingClass();
+        sInClass.inTest();
+        OutClass.InStaticClass.sTest();
     }
 }
